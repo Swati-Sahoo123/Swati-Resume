@@ -1,0 +1,207 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: white;
+    --secondary-color: rgba(168, 160, 160, 0.068);
+    --text-color: black;
+    --background: white;
+}
+
+.dark-theme {
+    --primary-color: rgb(22, 20, 20);
+    --secondary-color: #3a3a3a37;
+    --text-color: #c9c3c3b9;
+    --color: #ff7613;
+    --background: #c9c3c3b9;
+
+}
+
+.night-mode-container {
+    flex: 1;
+    text-align: right;
+    width: 100%;
+    padding: 1rem;
+}
+
+#icon {
+    width: 25px;
+    cursor: pointer;
+}
+
+html {
+    font-size: 12px;
+}
+
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: var(--primary-color);
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.resume {
+    line-height: 2.5;
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+img {
+    border-radius: 100%;
+    width: 100%;
+    /*  100% OF PARENT CONTAINER */
+}
+
+/* LAYOUT */
+.container {
+    max-width: 1000px;
+    width: 95%;
+    margin: 0 auto;
+    display: grid;
+    padding: 4rem;
+    background: var(--secondary-color);
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    text-align: justify;
+}
+
+.profile_profileImg {
+    width: 100px;
+    height: 100%;
+}
+
+.profile_description {
+    margin-top: 1rem;
+    color: var(--text-color);
+}
+
+/* For our small device */
+@media only screen and (max-width: 768px) {
+    .container {
+        /* max-width: 1000%; */
+        width: 100%;
+        padding: 3rem;
+        gap: 4px;
+        display: grid;
+        grid-template-columns: 1fr;
+
+    }
+}
+
+.profile {
+    grid-column: 1/-1;
+    /*it width take the space of 2 column */
+    margin-bottom: 2rem;
+}
+
+@media only screen and (max-width: 768px) {
+    .profile {
+        margin-bottom: 0%;
+    }
+}
+
+.profile_container {
+    display: flex;
+    gap: 2rem;
+}
+
+.profile_name {
+    color: var(--color);
+}
+
+.profile_title {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: rgb(89, 88, 88);
+}
+
+.group-1 {
+    color: var(--text-color);
+    margin-top: 1rem;
+    background-color: #7b797815;
+    padding: 1.5rem;
+    border-radius: 3px;
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr 1fr;
+}
+
+@media only screen and (max-width: 768px) {
+    .group-1 {
+        font-size: 11.5px;
+        line-height: 2;
+        display: flex;
+        flex-direction: column;
+        text-align: initial;
+        gap: 1rem;
+        padding: 0.8rem;
+    }
+}
+
+.contact-1 {
+    align-items: center;
+    justify-content: flex-start;
+
+}
+
+.soft {
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 4px;
+}
+
+.soft>span {
+    background: linear-gradient(to top left, #0f0f0f41, rgba(169, 167, 167, 0.314));
+    color: var(--background);
+    border-radius: 4px;
+    padding: 3px;
+    text-align: justify;
+    font-size: small
+        /*always use rem(root em)= 1rem,1.2rem.. */
+}
+
+/* never use "vw" in font-size */
+.skill {
+    margin-top: 2.4rem;
+    line-height: 1;
+    color: var(--color);
+    text-align: left;
+}
+
+p {
+    color: var(--text-color);
+}
+
+h3 {
+    line-height: 3;
+    color: var(--color);
+    text-align: left;
+
+}
+
+strong {
+    line-height: 3;
+}
+
+.space {
+    margin-top: 2rem;
+    line-height: 0%;
+    text-align: left;
+}
+
+.techno {
+    color: var(--text-color);
+    line-height: 2;
+    margin-top: 1rem;
+}
+
+li {
+    color: var(--text-color);
+}
